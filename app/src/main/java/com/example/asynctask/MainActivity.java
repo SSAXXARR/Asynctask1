@@ -18,4 +18,14 @@ public class MainActivity extends AppCompatActivity {
     public PaneContainer getContainer() {
         return container;
     }
+
+    //событие, что нажалась кнопка back оно приходит в главную активити.
+
+    @Override
+    public void onBackPressed() {
+        //если он все сделал сам и вернет true, то просто уходим от сюда.
+        if(container.onBackPressed()){return;}
+        //default action
+        super.onBackPressed();
+    }
 }

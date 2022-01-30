@@ -25,4 +25,9 @@ public class DualPaneContainer extends LinearLayout implements PaneContainer{
         //другой showItem, который у нас в классе DetailView
         detailView.showItem(item);
     }
+
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
 }
